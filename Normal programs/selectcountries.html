@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Country Capitals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .capital {
+            color: #007bff;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Select a Country</h2>
+        <select id="countrySelect" onchange="displayCapital()">
+            <option value="">--Select a country--</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">UK</option>
+            <option value="Australia">Australia</option>
+            <option value="India">India</option>
+        </select>
+        <div id="capitalDisplay" class="capital"></div>
+    </div>
+
+    <script>
+        function displayCapital() {
+            const capitals = {
+                USA: 'Washington, D.C.',
+                Canada: 'Ottawa',
+                UK: 'London',
+                Australia: 'Canberra',
+                India: 'New Delhi'
+            };
+
+            const selectedCountry = document.getElementById('countrySelect').value;
+            const capitalDisplay = document.getElementById('capitalDisplay');
+
+            if (selectedCountry) {
+                capitalDisplay.textContent = `Capital: ${capitals[selectedCountry]}`;
+            } else {
+                capitalDisplay.textContent = '';
+            }
+        }
+    </script>
+</body>
+</html>

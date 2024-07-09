@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="bookstore.xsl"?>
+<!DOCTYPE bookstore SYSTEM "bookstore.dtd">
+<bookstore>
+    <book>
+        <title>Effective Java</title>
+        <author>Joshua Bloch</author>
+        <isbn>978-0134685991</isbn>
+        <publisher>Addison-Wesley</publisher>
+        <edition>3rd</edition>
+        <price>45.00</price>
+    </book>
+    <book>
+        <title>Clean Code</title>
+        <author>Robert C. Martin</author>
+        <isbn>978-0132350884</isbn>
+        <publisher>Prentice Hall</publisher>
+        <edition>1st</edition>
+        <price>37.95</price>
+    </book>
+</bookstore>
